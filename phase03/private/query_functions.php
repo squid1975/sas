@@ -7,10 +7,10 @@ function find_all_salamanders(){
     $sql = "SELECT * FROM salamander ";
 
     $sql .= "ORDER BY name ASC";
-
+    
     $result = mysqli_query($db, $sql);
 
-    confirm_salamander_set($salamander_set);
+    confirm_result_set($result);
 
     return $result;
 }

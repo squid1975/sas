@@ -2,12 +2,6 @@
 
 $salamander_set = find_all_salamanders();
 
-$salamanders = [
-  ['id' => '1',  'salamanderName' => 'Red-Legged Salamander'],
-  ['id' => '2',  'salamanderName' => 'Pigeon Mountain Salamander'],
-  ['id' => '3',  'salamanderName' => 'ZigZag Salamander'],
-  ['id' => '4',  'salamanderName' => 'Slimy Salamander'],
-];
 
 $page_title = 'Salamanders'; 
 include(SHARED_PATH . '/salamander-header.php'); 
