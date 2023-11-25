@@ -23,6 +23,12 @@ function find_salamander_by_id($id) {
 
 function insert_salamander($salamander) {
    global $db;
+
+   $errors = validate_salamander($salamander);
+   if(!empty($errors)){
+       return $errors;
+   }
+   
     $sql = "INSERT INTO salamander ";
     $sql .= "(name, habitat, description) ";
     $sql .= "VALUES(";
@@ -43,6 +49,11 @@ function insert_salamander($salamander) {
 
 function update_salamander($salamander) {
     global $db;
+
+    $errors = validate_salamander($salamander);
+    if(!empty($errors)){
+        return $errors;
+    }
     $sql = "UPDATE salamander SET ";
     $sql .= "name='" .  $salamander['name'] . "', ";
     $sql .= "habitat='" .  $salamander['habitat'] . "',";
