@@ -5,9 +5,9 @@
 
 // Credentials
 $dbhost = 'localhost';
-$dbuser = 'sally';
-$dbpass = 'P@ssword1234';
-$dbname = 'salamanders';
+$dbuser = 'sydneyrp_admin';
+$dbpass = 'Deadmau5fan1997!';
+$dbname = 'sydneyrp_salamanders';
 
 // 1. Create a database connection
 $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
