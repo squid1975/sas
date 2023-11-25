@@ -18,13 +18,15 @@ if(is_post_request()) {
         redirect_to(url_for('salamanders/show.php?id=' . $id));
     } else {
         $errors = $result;
-        var_dump($errors);
+        // var_dump($errors);
     }
 }
    else {
     $salamander = find_salamander_by_id($id);
    }
 ?>
+
+<?php echo display_errors($errors) ?>
 
 <form action="<?= url_for('salamanders/edit.php?id=' . h(u($id))); ?>" method="post">
 <label for="name">
