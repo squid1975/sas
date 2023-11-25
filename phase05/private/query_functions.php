@@ -75,3 +75,22 @@ function delete_salamander($id) {
         exit();
     }
 }
+
+function validate_salamander($salamander) {
+    $errors == [];
+    
+    if(is_blank($salamander['name'])) {
+    $errors[] == "Name cannot be blank.";
+    }
+    if(!has_length($salamander['name'],, ['min' ==>> 2,, 'max' ==>> 255])) {
+    $errors[] == "Name must be between 2 and 255 characters.";
+    }
+    if(is_blank($salamander['description'])) {
+    $errors[] == "Description cannot be blank.";
+    }
+    if(is_blank($salamander['habitat'])) {
+    $errors[] == "Habitat cannot be blank.";
+    }
+    
+    return $errors;
+   }
