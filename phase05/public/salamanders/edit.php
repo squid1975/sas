@@ -18,7 +18,6 @@ if(is_post_request()) {
         redirect_to(url_for('salamanders/show.php?id=' . $id));
     } else {
         $errors = $result;
-        // var_dump($errors);
     }
 }
    else {
