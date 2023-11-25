@@ -1,8 +1,8 @@
 <?php
 // local
 define("DB_SERVER", "localhost");
-define("DB_USER", "sally");
-define("DB_PASS", "somepa55word");
+define("DB_USER", "spenix");
+define("DB_PASS", "Deadmau5fan1997!");
 define("DB_NAME", "salamanders");
 
 //a2

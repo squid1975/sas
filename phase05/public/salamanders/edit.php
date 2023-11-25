@@ -13,8 +13,13 @@ if(is_post_request()) {
     $salamander['habitat'] = $_POST['habitat'] ?? '';
     $salamander['description'] = $_POST['description'] ?? '';
     // show that $result is not neceessary
-    update_salamander($salamander);
-    redirect_to(url_for('salamanders/show.php?id=' . $id));
+    $result = update_salamander($salamander);
+    if($result === true){
+        redirect_to(url_for('salamanders/show.php?id=' . $id));
+    } else {
+        $errors = $result;
+        var_dump($errors);
+    }
 }
    else {
     $salamander = find_salamander_by_id($id);
